@@ -130,7 +130,7 @@ const Menu = () => {
   const handlePaymentMethodChange = (event) => {
     setSelectedPaymentMethod(event.target.value);
   };
-  const handlePay =async (e) => {
+  const handlePay = async (e) => {
     e.preventDefault();
 
     if (
@@ -161,12 +161,15 @@ const Menu = () => {
       };
       console.log(userOrder);
       try {
-        const res =await axios.post("https://danjr-backend.onrender.com/orders", userOrder);
-        if (res === 200) {
-          setSuccess("Your Order has been Placed.");
-          navigate("/");
-        } else {
+        const res = await axios.post("https://danjr-backend.onrender.com/orders", userOrder);
+        console.log(res);
+        if (res.status !== 200) {
           setSuccess("Error placing Order, please try again!");
+        } else {
+          setSuccess("Your Order has been Placed.");
+          setTimeout(() => {
+            navigate("/");
+          }, 5000);
         }
       } catch (error) {
         navigate("/menu");
