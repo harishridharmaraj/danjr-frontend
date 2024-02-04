@@ -161,7 +161,7 @@ const Menu = () => {
       };
       console.log(userOrder);
       try {
-        const res = axios.post("https://main--graceful-heliotrope-76d119.netlify.app/orders", userOrder);
+        const res = axios.post("https://danjr-backend.onrender.com/orders", userOrder);
         if (res === 200) {
           setSuccess("Your Order has been Placed.");
           navigate("/");
