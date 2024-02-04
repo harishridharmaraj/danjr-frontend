@@ -1,0 +1,35 @@
+.main-container {
+  height: 100svh;
+  background-image: url(../assets/Mainbg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contactimg {
+  background-image: url("../assets/contact.png");
+  width: 100%;
+}
+.aboutimg {
+  background-image: url("../assets/shop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-attachment: fixed;
+}
+
+::placeholder {
+  padding: 0px 10px;
+  font-style: italic;
+}
+.whatsappbtn > a > img {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+}
+.whatsappbtn > a {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  z-index: 2;
+  background-color: transparent;
+}
